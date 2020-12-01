@@ -32,7 +32,7 @@ class ParkingSpacesController < ApplicationController
         @parking_space.update(parking_number: "", vehicle_number: "")
         format.html { redirect_to parking_spaces_path, notice: 'Post was successfully updated.' }
       else
-        format.html { render parking_spaces_unpark_form_path, notice: 'Could not find the vehicle.' }
+        format.html { render parking_spaces_unpark_form_path, flash: { notice: 'Could not find the vehicle.' }}
       end
     end     
   end
