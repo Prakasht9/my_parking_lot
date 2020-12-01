@@ -1,0 +1,6 @@
+- flash.keys.each do |key|
+  - toastr_key = TOASTR_KEYS[key]
+  javascript:
+    $(function() {
+      toastr["#{toastr_key}"]("#{flash[key]}");
+    });

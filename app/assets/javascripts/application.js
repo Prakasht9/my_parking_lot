@@ -1,0 +1,9 @@
+//= require jquery
+//= require jquery_ujs
+//= require popper
+//= require bootstrap
+//= require toastr
+//= require global
+//= require selectize
+//= require jquery.validate
+//= require custom_validators

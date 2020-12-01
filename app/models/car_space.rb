@@ -1,0 +1,3 @@
+class CarSpace < ParkingSpace
+
+end

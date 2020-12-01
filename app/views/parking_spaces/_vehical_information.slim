@@ -1,0 +1,20 @@
+-if parking_space.present?
+  .static_wrapper
+    .card.shadow
+      .card-body
+        .table-responsive
+          table.table.table-bordered
+            thead
+              tr
+                th Spot Number
+                th Type
+                th Vehicle Number
+                th Vehicle Reference Id
+            tbody
+              tr
+                td = parking_space.spot_number
+                td = parking_space.vehicle_type
+                td = parking_space.vehicle_number
+                td = parking_space.parking_number
+-else 
+  .alert.alert-info.text-center.fn-14 Vehical Not Fount, No data to show

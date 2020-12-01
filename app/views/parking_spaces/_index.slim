@@ -1,0 +1,27 @@
+.static_wrapper
+  .card.shadow
+    .card-body
+      .table-responsive
+        table.table.table-bordered
+          thead
+            tr
+              th Spot Number
+              th Type
+              th Vehicle Number
+              th Vehicle Reference Id
+          tbody
+            - parking_spaces.each do |parking_space|
+              tr
+                td = parking_space.spot_number
+                td = parking_space.vehicle_type
+                - if parking_space.vehicle_number.present? 
+                  td = parking_space.vehicle_number
+                  td = parking_space.parking_number
+                - else 
+                  td.strong FREE SPACE
+                  td.string FREE SPACE
+- if parking_spaces.present?
+  .row
+    .col-12
+      .float-left.my-4.blog-page-info.pad7tp.blog-text-color.ml-2 = page_entries_info( parking_spaces, model: '' )
+      .float-right.mr-2 = bootstrap_paginate parking_spaces

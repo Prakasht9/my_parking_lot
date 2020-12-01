@@ -1,0 +1,31 @@
+@import "bootstrap";
+@import "font-awesome-sprockets";
+@import "font-awesome";
+@import "toastr";
+@import "global";
+@import "selectize.default";
+
+.fn-17 {
+  font-size: 17px;
+}
+
+.blog-page-info {
+  font-size: .7rem !important;
+}
+
+ul.pagination {
+  border-radius: 0px;
+
+  & .page-item {
+    border-radius: 0px;
+
+    & .page-link {
+      border-radius: 0px;
+      font-size: .7rem;
+    }
+  }
+}
+
+.blog-text-color {
+  color: #212529;
+}

@@ -1,0 +1,7 @@
+{
+  "name": "my_parking_lot",
+  "private": true,
+  "dependencies": {
+    "selectize": "^0.12.6"
+  }
+}

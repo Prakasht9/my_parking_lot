@@ -1,0 +1,26 @@
+.row
+  .col-sm-12.col-md-8.offset-md-2
+    .card.mt-3.mb-5.
+      .card-header = "#{action_name&.titleize}"
+      .card-body
+        = simple_form_for @parking_space, html: { class: 'm-0 park ' } do |f|
+          .row.mb-3
+            .col-12
+              = f.input :parking_number, label: 'Parking ID *', readonly: true, input_html: {class: 'form-control', value: "VEHICLE#{DateTime.now.strftime('%d%m%Y%H%M%S')}" }
+
+          .row.mb-3
+            .col-12
+              = f.input :vehicle_number, label: 'Vehicle Number *', input_html: { class: 'form-control mb-3 ', rows: 5 }
+
+          .row.mb-3
+            .col-12              
+              = label_tag :type, 'Vehicle Type *'
+              = select_tag :type, options_for_select(['Car', 'Bike']), id: 'type_select', class: 'selectize', include_blank: true, name: 'parking_space[vehicle_type]'
+          
+          .row.mb-3
+            .col-12              
+              = label_tag :spot_number, 'Spot Number *'
+              = select_tag :parking_space_id, options_for_select([]), id: 'spot_select', class: 'selectize', include_blank: true, name: 'parking_space[spot_number]'
+          .row.mb-3
+            .col-12
+              = f.button :submit, 'Submit', class: 'btn btn-success mr-2'

@@ -1,0 +1,17 @@
+nav.navbar.navbar-expand-lg.navbar-light.fixed-top style="background-color: #6a788e;"
+  .container
+    = link_to 'Home', parking_spaces_path, class: 'navbar-brand text-white'
+
+    button.navbar-toggler aria-controls="navbarSupportedContent" aria-expanded="false" aria-label=("Toggle navigation") data-target="#navbarSupportedContent" data-toggle="collapse" type="button"
+      span.navbar-toggler-icon
+
+    #navbarSupportedContent.collapse.navbar-collapse
+      ul.navbar-nav.mr-auto
+        li.nav-item.active
+          = link_to 'Free Space', parking_spaces_free_parking_space_path, class: 'nav-link text-white'
+        li.nav-item.active
+          = link_to 'Park', new_parking_space_path, class: 'nav-link text-white'
+        li.nav-item.active
+          = link_to 'UnPark', parking_spaces_unpark_form_path, class: 'nav-link text-white'
+        li.nav-item.active
+          = link_to 'Find vehical', parking_spaces_find_vehical_form_path, class: 'nav-link text-white'

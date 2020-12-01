@@ -1,0 +1,9 @@
+.row
+  .col-sm-12.col-md-8.offset-md-2
+    .card.mt-3.mb-5.
+      .card-header = "#{action_name&.titleize}"
+      .card-body
+        = simple_form_for :find_vehical, url: { controller: 'parking_spaces', action: 'find_vehical' }, html: { method: :get, class: 'm-0 unpark' }, remote: true do |f|
+          = render 'parking_spaces/find_vehical_form', f: f
+        .row
+          .col-12#vehical_information

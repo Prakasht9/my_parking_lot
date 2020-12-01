@@ -1,0 +1,2 @@
+class BikeSpace < ParkingSpace
+end

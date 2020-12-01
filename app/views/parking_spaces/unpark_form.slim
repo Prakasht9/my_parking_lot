@@ -1,0 +1,7 @@
+.row
+  .col-sm-12.col-md-8.offset-md-2
+    .card.mt-3.mb-5.
+      .card-header = "#{action_name&.titleize}"
+      .card-body
+        = simple_form_for :unpark, url: { controller: 'parking_spaces', action: 'unpark' }, html: { method: :put, class: 'm-0 unpark' } do |f|
+          = render 'parking_spaces/find_vehical_form', f: f
